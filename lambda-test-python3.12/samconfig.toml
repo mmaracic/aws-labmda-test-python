@@ -1,9 +1,8 @@
-# More information about the configuration file can be found here:
-# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-config.html
 version = 0.1
 
 [default.global.parameters]
-stack_name = "lambda-test-python3.12"
+stack_name = "lambda-test-python3-12"
+region = "eu-central-1"
 
 [default.build.parameters]
 cached = true
@@ -13,9 +12,10 @@ parallel = true
 lint = true
 
 [default.deploy.parameters]
-capabilities = "CAPABILITY_IAM"
-confirm_changeset = true
+capabilities = [ "CAPABILITY_IAM", "CAPABILITY_NAMED_IAM" ]
+confirm_changeset = false
 resolve_s3 = true
+stack_name = "lambda-test-python3-12"
 
 [default.package.parameters]
 resolve_s3 = true

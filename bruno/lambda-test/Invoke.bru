@@ -1,0 +1,31 @@
+meta {
+  name: Invoke
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://d2i9ip7qda.execute-api.eu-central-1.amazonaws.com/Prod/hello
+  body: text
+  auth: inherit
+}
+
+body:json {
+  {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+  }
+}
+
+body:text {
+  {
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,2 @@
+# README
+* Investigate how to structure function to work with virtual environments so dependencies are visible in IDE but not included in ZIP because .aws-sam folder already contains them as a result of `sam build`.
